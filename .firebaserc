@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "oxygen-not-included-wiki-273b9": {
+      "hosting": {
+        "oxygen-not-included-wiki": [
+          "oxygen-not-included-wiki-273b9"
+        ]
+      }
+    }
+  }
+}
