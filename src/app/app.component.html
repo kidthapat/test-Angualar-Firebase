@@ -1,10 +1,11 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<!-- <div *ngIf="trailers$ | async as trailers; else loading">
-  <div *ngFor="let t of trailers"></div>
+<div *ngIf="trailers$ | async as trailers; else loading">
+  <div *ngFor="let t of trailers">
     <div>{{t.url}}</div>
     <div>{{t.name}}</div>
+  </div>
 </div>
-<ng-template #loading>loading...</ng-template> -->
+<ng-template #loading>loading...</ng-template>
 <nav>
   <a routerLink="/test" routerLinkActive="active">Testeiei</a>
 </nav>
