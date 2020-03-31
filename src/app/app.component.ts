@@ -13,7 +13,7 @@ export interface Trailer {
   styleUrls: ['./app.component.css']
 })
 
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
   title = 'oxygen-not-included-wiki';
 
   trailers$: Observable<Trailer[]>;
