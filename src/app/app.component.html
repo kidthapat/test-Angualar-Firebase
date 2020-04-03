@@ -1,12 +1,7 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div *ngIf="trailers$ | async as trailers; else loading">
-  <div *ngFor="let t of trailers">
-    <div>{{t.url}}</div>
-    <div>{{t.name}}</div>
-  </div>
+<h1>{{title | uppercase}}</h1>
+<div>
+  <a routerLink="realtimedb/trailers">Realtime Database</a>
+  | <a routerLink="cloudfirestore/trailers">Cloud Firestore</a>
 </div>
-<ng-template #loading>loading...</ng-template>
-<nav>
-  <a routerLink="/test" routerLinkActive="active">Testeiei</a>
-</nav>
+
 <router-outlet></router-outlet>

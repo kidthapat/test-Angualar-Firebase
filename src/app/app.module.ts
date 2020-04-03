@@ -6,18 +6,29 @@ import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import 'firebase/database';
-// import { RouterModule, Route} from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
+import { RealtimedbTrailersComponent } from './components/realtimedb-trailers/realtimedb-trailers.component';
+import { RealtimedbTrailersEditComponent } from './components/realtimedb-trailers-edit/realtimedb-trailers-edit.component';
+import { CloudfirestoreTrailersComponent } from './components/cloudfirestore-trailers/cloudfirestore-trailers.component';
+import { CloudfirestoreTrailersEditComponent } from './components/cloudfirestore-trailers-edit/cloudfirestore-trailers-edit.component';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import 'firebase/firestore';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RealtimedbTrailersComponent,
+    RealtimedbTrailersEditComponent,
+    CloudfirestoreTrailersComponent,
+    CloudfirestoreTrailersEditComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
-    // RouterModule,
+    ReactiveFormsModule,
+    AngularFirestoreModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

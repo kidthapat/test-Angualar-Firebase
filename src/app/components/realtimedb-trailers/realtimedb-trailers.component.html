@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row p-5">
+      <form [formGroup]="form" class="col col-sm-6">
+        <div class="form-group">
+          <label for="name">name: </label>
+          <input id="name" class="form-control form-control-lg" formControlName="name">
+        </div>
+        <div class="form-group">
+          <label for="url">url: </label>
+          <input id="url" class="form-control" required formControlName="url">
+        </div>
+        <button class="btn btn-primary" (click)="onClickedAdd()">add</button>
+      </form>
+    </div>
+  
+    <div *ngIf="trailers$ | async as trailers; else loading">
+      <div *ngFor="let t of trailers" class="trailer m-1 border rounded">
+        <iframe width="320" height="180" [src]="trustUrl(t.url)" frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+        <div class="p-2 d-flex">
+          <div class="p-2">{{t.name}}</div>
+          <div class="ml-auto">
+            <button class="btn btn-warning" (click)="onClickedEdit(t)">edit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ng-template #loading>loading...</ng-template>
+</div>
