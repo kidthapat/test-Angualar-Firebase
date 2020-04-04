@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="p-5">
+        <div class="form-group">
+            <label for="fileUpload">Vedio</label>
+            <input type="file" class="form-control-file" id="fileUpload" (change)="onFileUpload($event.target.files)">
+        </div>
+        <div *ngIf="uploadPercentageObservable$ | async as percentage">
+            <div>uploading {{percentage}}%</div>
+          </div>
+    </div>
+</div>

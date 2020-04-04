@@ -13,14 +13,17 @@ import { CloudfirestoreTrailersComponent } from './components/cloudfirestore-tra
 import { CloudfirestoreTrailersEditComponent } from './components/cloudfirestore-trailers-edit/cloudfirestore-trailers-edit.component';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import 'firebase/firestore';
-
+import { CloudStorageVideosComponent } from './components/cloud-storage-videos/cloud-storage-videos.component';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import 'firebase/storage';
 @NgModule({
   declarations: [
     AppComponent,
     RealtimedbTrailersComponent,
     RealtimedbTrailersEditComponent,
     CloudfirestoreTrailersComponent,
-    CloudfirestoreTrailersEditComponent
+    CloudfirestoreTrailersEditComponent,
+    CloudStorageVideosComponent
   ],
   imports: [
     BrowserModule,
@@ -29,6 +32,7 @@ import 'firebase/firestore';
     AngularFireDatabaseModule,
     ReactiveFormsModule,
     AngularFirestoreModule,
+    AngularFireStorageModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
