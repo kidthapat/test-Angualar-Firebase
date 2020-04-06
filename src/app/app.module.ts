@@ -28,9 +28,9 @@ import 'firebase/storage';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
-    ReactiveFormsModule,
     AngularFirestoreModule,
     AngularFireStorageModule,
   ],
